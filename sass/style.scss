@@ -30,3 +30,19 @@
   --rojo-hover: #c92f3a;
   --azul-hover: #0096cc;
 }
+
+body{
+  background-color: var(--primario-arena);
+}
+.Nav-bar{
+  background-color: var(--primario-azul-profundo);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  .logo{
+    
+  }
+  .nav-items{
+    // flex-direction: row;
+  }
+}
