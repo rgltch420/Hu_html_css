@@ -1,43 +1,11 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  /* --- COLORES PRIMARIOS (Base Caribe) --- */
-  --primario-azul-caribe: #00A8E8;
-  /* Mar y cielo */
-  --primario-azul-profundo: #1D3557;
-  /* Para header, menús */
-  --primario-arena: #F1FAEE;
-  /* Fondo principal suave */
-  /* --- COLORES SECUNDARIOS (Energía Carnaval) --- */
-  --secundario-amarillo-sol: #FFD60A;
-  /* Color protagonista */
-  --secundario-rojo-fiesta: #E63946;
-  /* Botones y CTA */
-  --secundario-verde-palma: #2A9D8F;
-  /* Detalles tropicales */
-  /* --- COLORES DE TEXTO Y APOYO --- */
-  --texto-principal: #1D3557;
-  /* Texto fuerte */
-  --texto-secundario: #5F6F73;
-  /* Descripciones */
-  --texto-claro: rgba(255, 255, 255, 0.9);
-  /* --- SOMBRAS (suaves pero cálidas) --- */
-  --sombra-suave: rgba(0, 168, 232, 0.08);
-  --sombra-media: rgba(29, 53, 87, 0.25);
-  --sombra-fuerte: rgba(230, 57, 70, 0.25);
-  /* --- EFECTOS Y HOVER --- */
-  --amarillo-hover: #e6c200;
-  --rojo-hover: #c92f3a;
-  --azul-hover: #0096cc;
-}
-
 body {
-  background-color: var(--primario-arena);
+  background-color: #080C14;
 }
 
 .Nav-bar {
@@ -50,14 +18,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 8%;
-  background-color: var(--primario-azul-profundo);
+  background-color: #14171F;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #1E222D;
   transition: all 0.3s ease;
 }
 
 .logo {
-  color: var(--secundario-amarillo-sol);
+  color: #5ED98A;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -72,7 +40,7 @@ body {
 }
 .nav-items li a {
   text-decoration: none;
-  color: black;
+  color: #5ED98A;
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
@@ -84,7 +52,7 @@ body {
   width: 100%;
 }
 .nav-items li a:hover {
-  color: var(--amarillo-hover);
+  color: #FFFFFF;
 }
 
 .hero-section {
@@ -100,7 +68,31 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
+  color: #FFFFFF;
+}
+.hero-section h2 {
+  font-size: 4.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 20px;
   color: var(--primario-blanco);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.hero-section h2 span {
+  color: var(--secundario-dorado-luz);
+}
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 45px auto;
+  color: var(--letra-suave);
+  line-height: 1.6;
+}
+
+.projects-section {
+  padding: 100px 0;
+  background-color: #1E222D;
 }
 
 /*# sourceMappingURL=index.css.map */

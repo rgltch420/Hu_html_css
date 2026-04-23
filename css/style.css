@@ -1,17 +1,58 @@
-/* Error: Expected expression.
- *    ,
- * 67 |   color: ;
- *    |          ^
- *    '
- *   styles.scss 67:10  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 67 \2502    color: ;\a    \2502           ^\a    \2575 \a   styles.scss 67:10  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #080C14;
+}
+
+.Nav-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #14171F;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1E222D;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  color: #5ED98A;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-items li a {
+  text-decoration: none;
+  color: #5ED98A;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.nav-items li a:hover::after {
+  width: 100%;
+}
+.nav-items li a:hover {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style.css.map */
