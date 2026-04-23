@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// =============================================================================
+// SISTEMA DE CAPAS "CYBER-NOIR" (Inspirado en tu imagen)
+// =============================================================================
+
+// --- CAPA 0: EL ABISMO (Fondo Infinito) ---
+// Úsalo para el <body>. Es el color más oscuro, como las sombras de la habitación.
+$color-deep-space:  #080C14; 
+
+// --- CAPA 1: SUPERFICIES (Contenedores Principales) ---
+// Úsalo para secciones grandes, main wrappers o el fondo de la Navbar. 
+// Es un gris azulado muy oscuro que separa el contenido del "vacío".
+$color-surface:     #14171F; 
+
+// --- CAPA 2: ELEVACIÓN (Tarjetas y Modales) ---
+// Úsalo para elementos que deben "flotar" sobre la superficie (Cards, Pop-ups).
+// Al ser más claro, el ojo humano entiende que está "más cerca" del usuario.
+$color-surface-elevated: #1E222D;
+
+// --- CAPA 3: INTERACCIÓN (Bordes y Líneas) ---
+// Úsalo para bordes de inputs, líneas divisorias (hr) o bordes de tarjetas.
+// Es un gris técnico que da estructura sin distraer.
+$color-border-tech: #2A2F3A;
+
+
+// --- COLORES DE ESTADO Y LUZ (Acentos) ---
+$color-neon-red:    #E3281E; // Luz de fondo/Peligro/Acción principal
+$color-matrix-green: #5ED98A; // Código/Éxito/Terminal
+$color-gold-cargo:  #C5A059; // Úsalo si quieres un toque elegante de logística
+
+
+// --- TIPOGRAFÍA ---
+$color-text-high:    #BCC3D2; // Texto principal (Párrafos)
+$color-text-dim:     #626A7E; // Texto secundario (Footer, fechas)
+$color-text-bright:  #FFFFFF; // Títulos (H1, H2) o texto sobre botones rojos
+
+
+// =============================================================================
+// IMPLEMENTACIÓN DETALLADA (EJEMPLO DE USO)
+// =============================================================================
+body {
+  background-color: $color-deep-space;;
+}
+
+.Nav-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: var(--primario-azul-profundo);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  color: ;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-items{
+   list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    li a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+
+    li a:hover::after {
+        width: 100%;
+    }
+
+    li a:hover {
+        color: var(--amarillo-hover);
+    }
+}

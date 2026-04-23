@@ -1,42 +1,17 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Expected expression.
+ *    ,
+ * 67 |   color: ;
+ *    |          ^
+ *    '
+ *   styles.scss 67:10  root stylesheet */
 
-:root {
-  /* --- COLORES PRIMARIOS (Base Caribe) --- */
-  --primario-azul-caribe: #00A8E8; /* Mar y cielo */
-  --primario-azul-profundo: #1D3557; /* Para header, menús */
-  --primario-arena: #F1FAEE; /* Fondo principal suave */
-  /* --- COLORES SECUNDARIOS (Energía Carnaval) --- */
-  --secundario-amarillo-sol: #FFD60A; /* Color protagonista */
-  --secundario-rojo-fiesta: #E63946; /* Botones y CTA */
-  --secundario-verde-palma: #2A9D8F; /* Detalles tropicales */
-  /* --- COLORES DE TEXTO Y APOYO --- */
-  --texto-principal: #1D3557; /* Texto fuerte */
-  --texto-secundario: #5F6F73; /* Descripciones */
-  --texto-claro: rgba(255,255,255,0.9);
-  /* --- SOMBRAS (suaves pero cálidas) --- */
-  --sombra-suave: rgba(0, 168, 232, 0.08);
-  --sombra-media: rgba(29, 53, 87, 0.25);
-  --sombra-fuerte: rgba(230, 57, 70, 0.25);
-  /* --- EFECTOS Y HOVER --- */
-  --amarillo-hover: #e6c200;
-  --rojo-hover: #c92f3a;
-  --azul-hover: #0096cc;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected expression.\a    \2577 \a 67 \2502    color: ;\a    \2502           ^\a    \2575 \a   styles.scss 67:10  root stylesheet";
 }
-
-body {
-  background-color: var(--primario-arena);
-}
-
-.Nav-bar {
-  background-color: var(--primario-azul-profundo);
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-}
-
-/*# sourceMappingURL=style.css.map */
