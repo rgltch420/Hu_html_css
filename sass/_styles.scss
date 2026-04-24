@@ -1,50 +1,33 @@
+// Variables Cyber-Tech
+$color-deep-space: #05070a; 
+$color-surface: #0d1117; 
+$color-surface-elevated: #161b22;
+$color-border-tech: #30363d;
+
+// Acentos (Adiós dorado)
+$color-neon-red: #ff3e3e; 
+$color-matrix-green: #00ff41; // Puro estilo terminal
+$color-text-high: #c9d1d9;
+$color-text-dim: #8b949e;
+$color-text-bright: #ffffff;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-// =============================================================================
-// SISTEMA DE CAPAS "CYBER-NOIR" (Inspirado en tu imagen)
-// =============================================================================
-
-// --- CAPA 0: EL ABISMO (Fondo Infinito) ---
-// Úsalo para el <body>. Es el color más oscuro, como las sombras de la habitación.
-$color-deep-space:  #080C14; 
-
-// --- CAPA 1: SUPERFICIES (Contenedores Principales) ---
-// Úsalo para secciones grandes, main wrappers o el fondo de la Navbar. 
-// Es un gris azulado muy oscuro que separa el contenido del "vacío".
-$color-surface:     #14171F; 
-
-// --- CAPA 2: ELEVACIÓN (Tarjetas y Modales) ---
-// Úsalo para elementos que deben "flotar" sobre la superficie (Cards, Pop-ups).
-// Al ser más claro, el ojo humano entiende que está "más cerca" del usuario.
-$color-surface-elevated: #1E222D;
-
-// --- CAPA 3: INTERACCIÓN (Bordes y Líneas) ---
-// Úsalo para bordes de inputs, líneas divisorias (hr) o bordes de tarjetas.
-// Es un gris técnico que da estructura sin distraer.
-$color-border-tech: #2A2F3A;
-
-
-// --- COLORES DE ESTADO Y LUZ (Acentos) ---
-$color-neon-red:    #E3281E; // Luz de fondo/Peligro/Acción principal
-$color-matrix-green: #5ED98A; // Código/Éxito/Terminal
-$color-gold-cargo:  #C5A059; // Úsalo si quieres un toque elegante de logística
-
-
-// --- TIPOGRAFÍA ---
-$color-text-high:    #BCC3D2; // Texto principal (Párrafos)
-$color-text-dim:     #626A7E; // Texto secundario (Footer, fechas)
-$color-text-bright:  #FFFFFF; // Títulos (H1, H2) o texto sobre botones rojos
-
-
-// =============================================================================
-// IMPLEMENTACIÓN DETALLADA (EJEMPLO DE USO)
-// =============================================================================
 body {
-  background-color: $color-deep-space;;
+  background-color: $color-deep-space;
+  color: $color-text-high;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+// Estilo Terminal para elementos específicos
+code, .learn-more, .logo, .p-h2-me-section {
+  font-family: 'Fira Code', monospace;
 }
 
 .Nav-bar {
@@ -56,44 +39,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background-color: $color-surface;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid $color-surface-elevated;
-  transition: all 0.3s ease;
-}
+  padding: 15px 8%;
+  background-color: rgba($color-surface, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid $color-border-tech;
 
-.logo {
+  .logo {
+    color: $color-matrix-green;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    span { color: $color-neon-red; }
+  }
 
-  color:$color-matrix-green ;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.nav-items{
-   list-style: none;
+  .nav-items {
+    list-style: none;
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 
     li a {
-        text-decoration: none;
+      text-decoration: none;
+      color: $color-text-dim;
+      font-size: 0.9rem;
+  
+      transition: 0.3s;
+      
+      &:hover {
         color: $color-matrix-green;
-        font-size: 15px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        transition: color 0.3s ease;
-        position: relative;
+        text-shadow: 0 0 8px $color-matrix-green;
+      }
     }
-
-    li a:hover::after {
-        width: 100%;
-    }
-
-    li a:hover {
-        color: $color-text-bright;
-    }
+  }
 }
