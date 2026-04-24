@@ -1,7 +1,6 @@
 @use "_styles";
 
 .hero-section {
-  // Mezclamos tu imagen original con un degradado que tira a los nuevos colores tech
   background:
     linear-gradient(rgba(styles.$color-deep-space, 0.8), rgba(styles.$color-surface, 0.9)),
     url("../assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg");
@@ -18,7 +17,6 @@
   padding: 0 20px;
   color: styles.$color-text-bright;
 
-  // Efecto de escaneo sutil (tech bash feeling)
   &::after {
     content: "";
     position: absolute;
@@ -51,7 +49,7 @@
     margin: 0 auto 45px auto;
     color: styles.$color-text-high;
     line-height: 1.6;
-    border-left: 3px solid styles.$color-neon-red; // Detalle lateral tipo terminal
+    border-left: 3px solid styles.$color-neon-red; 
     padding-left: 15px;
   }
 }
@@ -87,10 +85,9 @@
   line-height: 1.7;
 }
 
-// CUADRICULA DE 3 EN 3
+
 .cards {
   display: grid;
-  // Forzamos 3 columnas en pantallas grandes, 1 en móviles
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 
@@ -99,12 +96,11 @@
   }
 }
 
-// MANTENEMOS TU LAYOUT DE CARD ORIGINAL
 .card {
   background: styles.$color-surface-elevated;
   padding: 40px;
   border-radius: 12px;
-  border: 1px solid styles.$color-border-tech; // Borde más técnico
+  border: 1px solid styles.$color-border-tech; 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
@@ -152,7 +148,7 @@
 .icon-box {
   width: 60px;
   height: 60px;
-  background-color: styles.$color-surface; // Cambiado para que contraste mejor
+  background-color: styles.$color-surface; 
   border: 1px solid styles.$color-border-tech;
   border-radius: 10px;
   display: flex;
@@ -165,7 +161,7 @@
 }
 
 .learn-more {
-  color: styles.$color-neon-red; // Acento rojo para acciones
+  color: styles.$color-neon-red; 
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -179,20 +175,18 @@
   }
 }
 
-// Animación de línea de escaneo para el Hero
+
 @keyframes scanline {
   0% { top: 0; }
   100% { top: 100%; }
 }
 
-// --- Resto de secciones (Me-section, Video, etc) ---
 .me-section {
   padding: 100px 8%;
-  background-color: styles.$color-surface; // Un tono ligeramente distinto al deep-space
+  background-color: styles.$color-surface;  
   position: relative;
   overflow: hidden;
 
-  // Decoración de fondo: Un número de versión o texto sutil
   &::before {
     content: "v2.0.26";
     position: absolute;
@@ -235,7 +229,7 @@
   .desc-main {
     margin-bottom: 20px;
     text-align: left;
-    max-width: 100%; // Reset del max-width centrado anterior
+    max-width: 100%; 
     
     strong {
       color: styles.$color-matrix-green;
@@ -243,7 +237,6 @@
   }
 }
 
-// Grid de Iconos Tecnológicos
 .tech-stack-grid {
   flex: 1;
   display: grid;
@@ -320,7 +313,6 @@
   }
 }
 
-// Columna de información
 .contact-info {
   .info-block {
     margin-bottom: 30px;
@@ -354,7 +346,6 @@
   }
 }
 
-// Estilo del Formulario
 .contact-form {
   background: styles.$color-surface-elevated;
   padding: 40px;
@@ -397,7 +388,6 @@
   }
 }
 
-// Botón de ejecución
 .submit-btn {
   width: 100%;
   background: transparent;
@@ -424,7 +414,6 @@
 
 
 
-// Ajuste para móviles
 @media (max-width: 768px) {
   .me-section-container {
     flex-direction: column;
@@ -433,7 +422,7 @@
   
   .tech-stack-grid {
     width: 100%;
-    grid-template-columns: repeat(3, 1fr); // 3 columnas en móviles
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
@@ -485,7 +474,7 @@
 
 .carrousel-container {
   width: 100%;
-  height: 600px; // Reducimos un poco el alto para que sea más elegante
+  height: 600px; 
   overflow: hidden;
   position: relative;
 
@@ -495,11 +484,11 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    // Animación fluida
+  
     animation: cambio 25s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
     
     &:hover {
-      animation-play-state: paused; // Se detiene cuando el usuario mira una foto
+      animation-play-state: paused; 
     }
   }
 
@@ -509,7 +498,6 @@
     height: 100%;
     position: relative;
 
-    // Efecto de cristal sobre la imagen
     &::after {
       content: "";
       position: absolute;
@@ -534,7 +522,7 @@
   }
 }
 
-// Keyframes mejorados para un deslizamiento más "smooth"
+
 @keyframes cambio {
   0%, 15% { margin-left: 0; }
   20%, 35% { margin-left: -100%; }
@@ -552,11 +540,11 @@
 
 
 .video-anyways {
-  flex: 1.2; // El video toma un poco más de espacio
+  flex: 1.2; 
   min-width: 320px;
 }
 
-// Marco estilo Terminal de Linux
+
 .video-terminal-frame {
   background: styles.$color-surface-elevated;
   border: 1px solid styles.$color-border-tech;
@@ -592,7 +580,7 @@
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; // Aspect ratio 16:9
+  padding-bottom: 56.25%; 
   height: 0;
 
   iframe {
@@ -601,7 +589,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    filter: grayscale(20%) contrast(110%); // Toque cinematográfico
+    filter: grayscale(20%) contrast(110%); 
   }
 }
 
@@ -617,7 +605,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    font-family: 'Fira Code', monospace; // Para que parezca un output de sistema
+    font-family: 'Fira Code', monospace; 
   }
 
   .title-main {
@@ -625,19 +613,17 @@
     margin-bottom: 25px;
   }
 
-  // Nueva clase reemplazando a frase-vallenata
   .terminal-note {
     margin-top: 30px;
     padding: 20px;
     background: rgba(styles.$color-matrix-green, 0.05);
     border-left: 4px solid styles.$color-neon-red;
     color: styles.$color-text-high;
-    font-family: 'Fira Code', monospace; // Fuente mono para el toque dev
+    font-family: 'Fira Code', monospace; 
     font-size: 0.95rem;
     line-height: 1.5;
     position: relative;
 
-    // Un pequeño cursor parpadeante al final de la frase
     &::after {
       content: "_";
       animation: blink 1s infinite;
@@ -646,7 +632,6 @@
   }
 }
 
-// Agregamos la animación de parpadeo del cursor
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -657,7 +642,6 @@
   border-top: 1px solid styles.$color-border-tech;
   position: relative;
   
-  // Efecto de resplandor sutil en la parte superior
   &::before {
     content: "";
     position: absolute;
@@ -722,7 +706,6 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
     
-    // Color específico para Twitter/X en hover si quieres variar
     &:last-child:hover {
       color: styles.$color-text-bright;
       border-color: styles.$color-text-dim;
@@ -788,7 +771,6 @@
   100% { opacity: 1; }
 }
 
-// Responsivo
 @media (max-width: 768px) {
   .footer-top, .footer-bottom {
     flex-direction: column;

@@ -25,7 +25,7 @@ body {
   line-height: 1.6;
 }
 
-// Estilo Terminal para elementos específicos
+
 code, .learn-more, .logo, .p-h2-me-section {
   font-family: 'Fira Code', monospace;
 }
@@ -44,29 +44,64 @@ code, .learn-more, .logo, .p-h2-me-section {
   backdrop-filter: blur(12px);
   border-bottom: 2px solid $color-border-tech;
 
-  .logo {
-    color: $color-matrix-green;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-    span { color: $color-neon-red; }
+  .menu-toggle {
+    display: none; 
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+
+    .bar {
+      width: 25px;
+      height: 2px;
+      background-color: $color-matrix-green;
+      box-shadow: 0 0 5px $color-matrix-green;
+      transition: 0.3s;
+    }
   }
 
-  .nav-items {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-
-    li a {
-      text-decoration: none;
-      color: $color-text-dim;
-      font-size: 0.9rem;
   
-      transition: 0.3s;
-      
-      &:hover {
-        color: $color-matrix-green;
-        text-shadow: 0 0 8px $color-matrix-green;
+  @media (max-width: 768px) {
+    padding: 15px 5%;
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-items {
+      display: none; 
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%; 
+      width: 70%;
+      height: 100vh;
+      background-color: rgba($color-surface, 0.95);
+      backdrop-filter: blur(20px);
+      border-left: 2px solid $color-matrix-green;
+      padding: 100px 40px;
+      transition: 0.4s ease-in-out;
+      gap: 3rem;
+
+      &.is-active {
+        display: flex; 
+        right: 0; 
+        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
+      }
+
+      li a {
+        font-size: 1.2rem;
+        font-family: 'Courier New', Courier, monospace; // Estilo consola
       }
     }
   }
+}
+
+
+.menu-toggle.is-active {
+  .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .bar:nth-child(2) { opacity: 0; }
+  .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }

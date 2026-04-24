@@ -48,7 +48,6 @@ code, .learn-more, .logo, .p-h2-me-section {
   text-decoration: none;
   color: #8b949e;
   font-size: 0.9rem;
-
   transition: 0.3s;
 }
 .Nav-bar .nav-items li a:hover {
